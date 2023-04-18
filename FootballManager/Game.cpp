@@ -1,5 +1,4 @@
 #include "Game.h"
-#include "MainMenu.h"
 
 void Game::GameMenu() {
 	system("cls");
@@ -15,13 +14,14 @@ void Game::GameMenu() {
 void Game::GameInteraction() {
 	cin >> answer;
 	if (answer == 1) {
-		cout << "Oops!" << endl;
+		NewGame newgame{};
+		newgame.NewSave();
 	}
 	else if (answer == 2) {
-		cout << "Oops!" << endl;
+		Saves saves{};
+		saves.PrintSaves();
 	}
 	else if (answer == 3) {
-		cout << "Oops!" << endl;
 		MainMenu mainmenu{};
 		mainmenu.PrintMenu();
 	}
